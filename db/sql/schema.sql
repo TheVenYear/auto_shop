@@ -43,13 +43,3 @@ create table "order"
     foreign key (car_id) references car (id) on delete set null,
     foreign key (customer_id) references customer (id) on delete cascade
 );
-
--- create table order_car
--- (
---     car_id     int not null,
---     order_id   int not null,
---     car_amount int not null default 0,
---     primary key (car_id, order_id),
---     foreign key (car_id) references car (id),
---     foreign key (order_id) references "order" (id)
--- );
